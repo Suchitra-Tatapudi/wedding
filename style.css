@@ -1,0 +1,881 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Gabriela&family=Great+Vibes&family=Island+Moments&family=Ms+Madi&family=Pacifico&family=Playwrite+AU+SA:wght@100..400&display=swap');
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+      
+        /* Left Section (70% width) */
+        .left-section {
+            width: 70%;
+            background-image:url("https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?cs=srgb&dl=pexels-emma-bauso-1183828-2253870.jpg&fm=jpg");
+            
+            background-size: cover;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        /*left sub section*/
+        .left-sub-section{
+            width: 70%; /* Responsive width */
+            max-width: 220px; /* Limits maximum size */
+            background-color: rgba(255, 255, 255, 0.829);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 5px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .left-sub-des{
+            font-family:"Gabriela", serif;
+            font-size:13px;
+        }
+        .lsd1{
+            font-size: 17px;
+            font-weight: 700;
+        }
+        .lsd2{
+            font-size: 35px;
+            font-family: "great vibes";
+        }
+
+
+
+        /* Right Section (30% width) */
+        .right-section {
+            margin-left: 5px;
+            width: 30%;
+            background-color: #f5f5f5;
+           background-size: cover;
+            box-sizing: border-box;
+            overflow-y: auto; /* Enables scrolling */
+        }
+
+        /* Content Styling */
+        h1, h2 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Scrollbar Styling */
+        .right-section::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .right-section::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .right-section::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MANADHE 1*/
+
+/* Image Section */
+.image-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: fadeImages 12s infinite;
+}
+
+/* Fade Transition for Images */
+@keyframes fadeImages {
+    0%, 33% {
+        background-image: url('https://fetch.getnarrativeapp.com/static/17ed63d7-0da0-47ce-a60f-7b9a78ae9c8c/Elora-Mill-Wedding-April-Sandra-Monaco-Photography-Meghan-and-Jonny054.JPG.jpg?w=1500');
+    }
+    33%, 66% {
+        background-image: url('https://fetch.getnarrativeapp.com/static/38cb4f48-76ed-4960-ac9c-5c6e593ada37/Elora-Mill-Wedding-April-Sandra-Monaco-Photography-Meghan-and-Jonny037.JPG.jpg?w=1500');
+    }
+    66%, 100% {
+        background-image: url('https://fetch.getnarrativeapp.com/static/6e1173d7-cf36-4139-84b0-d013353712fc/Elora-Mill-Wedding-April-Sandra-Monaco-Photography-Meghan-and-Jonny040.JPG.jpg?w=750');
+    }
+}
+
+/* Name and Button Container */
+.name-button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 8px rgba(255, 252, 252, 0.728);
+}
+
+.name-button-container h2 {
+    font-size: 23px;
+    margin: 0;
+    font-family: "Great Vibes", cursive;
+    color: black;
+}
+
+.name-button-container button {
+    margin-top: 5px;
+    padding: 8px 10px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #714713, #c9b28b,#efbf78);
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.name-button-container button:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+}
+
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-image: url("https://wallpaperdelight.com/wp-content/uploads/2024/06/A-serene-and-elegant-wallpaper-features-a-minimalist-composition-with-a-single-delicate-flower-in-soft-pastel-hues-against-a-clean-white-background.jpg");
+   background-size: cover;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    height:340px;
+    position: relative;
+}
+.msd{
+    font-family: "great vibes";
+    font-size: 25px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: red;
+}
+
+/* Countdown Timer Styling */
+#countdown {
+    margin-top: 20px;
+    padding: 10px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #714713, #c9b28b,#efbf78);
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MANADHE 2 */
+.image-container {
+    background-image: url("https://i.pinimg.com/736x/80/a1/73/80a1735ae0c970395c78e0da1908a200.jpg");
+    background-size: cover;
+    padding: 10px;
+    text-align: center;
+    width: 94%; /* Adjust the width as needed */
+   
+}
+
+.content {
+    margin-bottom: 20px; /* Adds space between the content and the images */
+    font-family: "Gabriela", serif;
+}
+
+.content h2 {
+    font-size: 20px;
+    color: #333; /* Dark color for the title */
+  
+}
+
+.content p {
+    font-size: 13px;
+    color: #666; /* Lighter color for the paragraph */
+    
+}
+
+.image-and-info {
+    display: block; /* Stack elements vertically */
+    gap: 30px; /* Adds space between the sections */
+}
+
+.image-info {
+    text-align: center;
+    margin-bottom: 30px; /* Adds space between the image-info sections */
+}
+
+.image {
+    border: 5px solid #c9b28b; /* Initial border */
+    border-radius: 50%; /* Makes the image circular */
+    height: 200px; /* Reduced height */
+    width: 200px; /* Reduced width */
+    box-shadow: 0 4px 6px rgba(255, 250, 250, 0.895); /* Adds shadow around images */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for zoom, border color, and shadow */
+}
+
+.image:hover {
+    transform: scale(1.2); /* Zoom in effect */
+    background: linear-gradient(145deg, #714713, #c9b28b,#efbf78); /* Lighten the border color to a bright color */
+    box-shadow: 0 8px 15px rgba(74, 73, 70, 0.479); /* Enhanced shadow on hover */
+}
+
+
+
+
+
+
+
+
+.name{
+    font-family: "great vibes";
+    color:#714713;
+}
+.family-info {
+    font-family: "great vibes";
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px; /* Adds space between image and info */
+}
+
+.family-info-des {
+    font-family: "Gabriela", serif;
+    font-size: 14px;
+    color:#666;
+}
+
+#and-sign {
+    font-size: 50px;
+    font-family: "Ms Madi", serif;
+    color: black;
+}
+
+.insta-btn {
+    margin-top: 5px;
+    padding: 10px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #714713, #c9b28b,#efbf78);
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      width:130px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.insta-btn:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+}
+
+.insta-img {
+    width: 15px;
+    height: 14px;
+    padding-top: 10px;
+}
+
+#insta {
+    padding-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+/*manadhe idhi antha 3*/
+.right-container{
+    background-image: url("https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?cs=srgb&dl=pexels-emma-bauso-1183828-2253870.jpg&fm=jpg");
+    background-size: cover;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.r-content{
+    text-align: center;
+    padding:10px;
+    background-color: #e9e3e3a9;
+    border-radius: 8px;
+}
+.move-text{
+    color:rgb(4, 1, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*manadhe idhi antha 4*/
+/* Page wrapper */
+.page-wrapper {
+    background-image: url("https://marketplace.canva.com/EAFIKG6eaGk/1/0/900w/canva-tropical-beige-aesthetic-phone-wallpaper-8yUL8Zcfjqg.jpg");
+    height: 100vh;
+    width: 29vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Heading */
+/* Heading with new shining effect */
+.heading {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Gabriela", serif;
+    color: transparent; /* Make text transparent */
+    background: linear-gradient(90deg, #714713, #c9b28b, #efbf78); /* Gradient for shine */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    background-clip: text; /* For non-webkit browsers */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5); /* Soft glow like glass */
+    display: inline; /* Keep text compact */
+    padding: 0; /* Remove padding */
+    margin: 10%; /* Remove margin */
+}
+
+/* Info card container (adds perspective for the flip effect) */
+.info-card-container {
+    perspective: 1000px; /* Creates depth for the 3D flip effect */
+}
+
+/* Info card */
+.info-card {
+    background-color: #fee4c2ae;
+    background-position: center;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(152, 119, 119, 0.986);
+    padding: 20px;
+    border-radius: 8%;
+    margin-bottom: 45px;
+    text-align: center;
+    transition: transform 1s ease-in-out, box-shadow 0.3s ease; /* Smooth transition for both the turn and glow effect */
+    transform-style: preserve-3d; /* Keeps the child elements in 3D when flipped */
+}
+
+/* Hover effect - turn the card */
+.info-card:hover {
+    transform: rotateY(360deg); /* Rotate the card 360 degrees for a complete turn-around effect */
+    box-shadow: 0px 9px 20px rgba(193, 171, 171, 0.568); /* Add glow effect */
+}
+
+/* Front side of the card */
+.info-card .front {
+    backface-visibility: hidden; /* Hide back side when flipped */
+}
+
+/* Back side of the card */
+.info-card .back {
+    position: absolute;
+    transform: rotateY(180deg); /* Rotate the back content */
+    backface-visibility: hidden; /* Hide the back during flip */
+}
+
+/* Info text */
+.info-text {
+    font-family: "Gabriela", serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #915c12;
+    line-height: 1.6;
+}
+
+
+
+
+
+/*manadhe idhi antha 5*/
+/* Main container */
+.main-container.section5 {
+    background-image: url("https://i.pinimg.com/736x/34/94/5b/34945bd111fa945f9fe171421b97c69a.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Title text at the top of the container */
+.title-text {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Gabriela", serif;
+    color: transparent; /* Make text transparent */
+    background: linear-gradient(90deg, #714713, #c9b28b, #efbf78); /* Gradient for shine */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    background-clip: text; /* For non-webkit browsers */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5); /* Soft glow like glass */
+    display: inline; /* Keep text compact */
+   margin: 20px 10%;
+}
+
+/* Event card */
+.event-card {
+    background-color: whitesmoke;
+    width: 70%; /* Make the card responsive */
+    max-width: 350px;
+    border-radius: 19px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    
+     /* Adds space below the header */
+}
+
+/* Card heading */
+.card-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #d4ad7dbb;
+    font-family: "Gabriela", serif;
+}
+#sec5-span{
+    font-size: 33px;
+    color:"#714713df";
+    
+}
+/* Location map */
+.location-map iframe {
+    width:220px;
+    height:130px;
+    border-radius: 13px;
+    border: 3px solid #c53710;
+    margin-bottom: 15px; /* Adds margin space below the map */
+}
+
+/* Card footer */
+.card-footer {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+}
+.map-btn{
+    margin-top: 5px;
+    padding: 8px 10px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #714713, #c9b28b,#efbf78);
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      width:100px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+.map-btn:hover{
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*manadhe idhi antha 6*/
+/* Main container for the gallery */
+.gallery-container {
+    width: 100%;
+    height: 100vh; /* Ensures the container fills the entire screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#2e210c;
+    background-position: center;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* External top text outside of the image card */
+.external-top-text {
+    text-align: center;
+    color: white;
+    margin: 20px; /* Adds space between the top text and image card */
+}
+.external-top-text h1 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Gabriela", serif;
+    color: transparent; /* Make text transparent */
+    background: linear-gradient(90deg, #714713, #c9b28b, #efbf78); /* Gradient for shine */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    background-clip: text; /* For non-webkit browsers */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5); /* Soft glow like glass */
+    display: inline; /* Keep text compact */
+   margin: 10%;
+}
+
+.external-top-text p {
+    font-size: 1rem;
+    color: #ffffff;  /* Color applied to the paragraph */
+    font-family: "Gabriela", serif;
+}
+
+/* Curved rectangle-shaped image card */
+.hexagon-image-card {
+    width: 400px; /* Set width for the curved rectangle */
+    height: 250px; /* Set height for the curved rectangle */
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px; /* Curved corners for the rectangular shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for images inside the card */
+.image-slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition effect for moving images */
+}
+
+/* Style for each image inside the card */
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    cursor: pointer; /* Indicates the image can be clicked */
+}
+
+/* Keyframes to create image movement effect */
+@keyframes moveImages {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Apply animation to images */
+.hexagon-image-card .image-slides {
+    animation: moveImages 9s infinite;
+}
+
+/* External bottom text outside of the image card */
+.external-bottom-text {
+    text-align: center;
+    color: white;
+    margin-top: 20px; /* Adds space between the image card and bottom text */
+    font-family: "Gabriela", serif;
+}
+
+.external-bottom-text p {
+    font-size: 1rem;
+    color: #ffffff;  /* Color applied to the paragraph */
+    font-family: "Gabriela", serif;
+}
+
+/* Full-screen overlay for zoomed-in image */
+.zoomed-image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.zoomed-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.footnote{
+    text-align: center;
+    font-family: "Gabriela", serif;
+    color: #2e210c;
+}
